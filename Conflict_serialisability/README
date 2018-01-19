@@ -1,0 +1,4 @@
+Usage
+algo.py input1.txt
+
+This application takes a database schedule as input and shows whether it is conflict serialisable or not.

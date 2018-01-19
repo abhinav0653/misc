@@ -1,0 +1,13 @@
+6
+T1:write(A)
+T2:read(A)
+T3:write(A)
+T4:write(C)
+T5:write(A)
+T6:write(A)
+T1:write(AB)
+T2:write(D)
+T3:write(A)
+T4:write(X)
+T5:write(P)
+T1:read(B)

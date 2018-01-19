@@ -1,0 +1,3 @@
+Array programming languages generalize operations on scalars to apply to vectors, matrices and high dimension array.
+
+APLparser.py is a custom parser to work with Array programming languages written in python using pyparsing.
