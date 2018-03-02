@@ -1,0 +1,3 @@
+A calculator using lex and yacc
+Use make command to generate calc.out.
+Observe the warning related to shift reduce conflict and relate it with its cause.
