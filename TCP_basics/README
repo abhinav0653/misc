@@ -1,0 +1,9 @@
+A client server combination using linux socket programming.
+IP address of both source and destination is 127.0.0.1(loopback)
+
+Steps:
+1) Launch wireshark and select loopback for monitoring.
+2) Launch server.
+3) Lauch client using ./client 127.0.0.1.
+4) Observer trace on wireshark
+
