@@ -1,0 +1,11 @@
+Use make to get following files:-
+
+basic.prep: It is a text file after preprocessing.
+basic.cp: It is intermediate code after compilation but before assembly. It is also a text file.
+basic.o: It is compiled and assembled file. It is binary file.It is not executable because it is not linked. Use objdump utility to view its contents.
+basic.out: It is executable file. It is also a binary file. To view its contents use readelf utility.
+
+
+Observation
+1) Intermediate code basic.cp has no branch for NO. Compiler has optimised it.
+2) basic.o lesser number of sections than basic.out. Extra sections are related to execution.
