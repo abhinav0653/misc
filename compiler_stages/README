@@ -9,3 +9,18 @@ basic.out: It is executable file. It is also a binary file. To view its contents
 Observation
 1) Intermediate code basic.cp has no branch for NO. Compiler has optimised it.
 2) basic.o lesser number of sections than basic.out. Extra sections are related to execution.
+
+
+Function calls and stack
+ebp is extended base pointer. esp is extended stack pointer. Stack pointer points to the top of stack. Base pointer points to the base or starting address of current function on the stack. Assuming that stack grows upwards, just below the base pointer is the return address or the address of the next instruction to be executed when current function returns. This address is not pushed explicity but is pushed by assembly instruction 'call'. 
+When call <address> is executed
+1) Current value of instruction pointer is pushed to stack.
+2) instruction pointer is overwritten with <address>.
+3) At <address> the function automatically adds instruction to push old base pointer. Thus, above return address, there is old base pointer. Above it is empty space which will be used for new function. Thus, the base pointer is overwritten with stack pointer address which holds old BP and address above which is the start of free location. When function returns, operations are conducted in reverse.
+
+func arg2  <-- current esp
+func arg1
+old bp <-- current ebp
+return address
+
+*Stack groing upwards
