@@ -1,0 +1,10 @@
+This folder contains most of common nltk operations helpful in text analysis.
+
+Many times, it is useful to work with our own corpus. In that case, how to load it and use in built nltk operations on it is a part of "working_with_own_corpus" folder.
+
+
+References:
+Natural language process with python: O'Reilly 
+
+
+
