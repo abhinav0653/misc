@@ -1,0 +1,4 @@
+2
+T1:read(Q)
+T2:write(Q)
+T1:write(Q)

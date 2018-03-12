@@ -1,0 +1,12 @@
+2
+T1:read(A)
+T1:write(A)
+T2:read(A)
+T1:read(B)
+T1:write(B)
+T2:read(C)
+T2:read(B)
+T2:write(B)
+T1:read(C)
+T1:write(C)
+T2:write(C)

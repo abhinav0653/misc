@@ -1,0 +1,4 @@
+1
+T1:read(X)
+T1:write(X)
+T1:read(Y)

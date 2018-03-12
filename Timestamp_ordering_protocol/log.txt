@@ -1,0 +1,28 @@
+T2:read(A)
+Read timestamp of A updated to 1 by transaction 2
+T2:write(A)
+Write timestamp of A updated to 1 by transaction 2
+T1:read(A)
+Read timestamp of A updated to 2 by transaction 1
+T2:read(B)
+Read timestamp of B updated to 1 by transaction 2
+T2:write(B)
+Write timestamp of B updated to 1 by transaction 2
+T1:read(C)
+Read timestamp of C updated to 2 by transaction 1
+T1:read(B)
+Read timestamp of B updated to 2 by transaction 1
+T1:write(B)
+Write timestamp of B updated to 2 by transaction 1
+T2:read(C)
+Read timestamp of C retained to 2 by transaction 2
+T2:write(C)
+T2 rolled back and will be restarted with new timestamp
+T1 rolled back and will be restarted with new timestamp
+T1:write(C)
+Instruction not executed!!
+Transaction with TransID 1 is already rolled back
+
+Additional information:
+Timestamps of transactions starting from index 1 to end are:
+[ 2 ,   1 ]
