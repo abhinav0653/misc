@@ -1,0 +1,20 @@
+Building and running standalone kernel.
+Steps: Launch build.sh.
+
+Theory
+Linux kernel is a standalone piece of code but still it can only do things invisible to user unless it is provided with sensors to interact with outside environmentThe minimal requirement is a file which could be run by init process.This must be a vaild filesystem process.
+
+The kernel can be compiled using different compilers and for different architectures.
+ARCH and CROSS_COMPILE need to set by user so that make utility runs with right compiler.
+Environment is configured by running make arch_defconfig. Then kernel is compiled using make. Compilation results in bzImage in boot folder of the architecture for which defconfig was run.
+
+This bzImage can be run by qemu but trouble is it will not detect anything to launch. It is like running a machine with no input and output devices. It gives an error of no filesystem found.
+
+Now writing a mountable filesystem is difficult task. So busybox provides a bare minimal filesystem with all commands(note that commands are binaries added externally). 
+To configure busybox again ARCH is specified and then a defconfig is made.
+
+Then make install command for busybox creates a _install folder with all the subfolders within.
+This folder alongwith its subfolders needs to be converted to root file system image to be identificable by linux.
+
+Once this is done it works and kernel boots till to give a basic shell! 
+
