@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleGame", "SimpleGame\SimpleGame.csproj", "{D45169A7-C790-4A7B-BDE0-B75AEE009297}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XELibrary", "..\XELibrary\XELibrary\XELibrary.csproj", "{10F3320A-216C-4F55-9FA9-337A8E443127}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D45169A7-C790-4A7B-BDE0-B75AEE009297}.Debug|x86.ActiveCfg = Debug|x86
+		{D45169A7-C790-4A7B-BDE0-B75AEE009297}.Debug|x86.Build.0 = Debug|x86
+		{D45169A7-C790-4A7B-BDE0-B75AEE009297}.Release|x86.ActiveCfg = Release|x86
+		{D45169A7-C790-4A7B-BDE0-B75AEE009297}.Release|x86.Build.0 = Release|x86
+		{6580E5F7-D419-4FBF-84CE-BED56AB69209}.Debug|x86.ActiveCfg = Debug|x86
+		{6580E5F7-D419-4FBF-84CE-BED56AB69209}.Release|x86.ActiveCfg = Release|x86
+		{10F3320A-216C-4F55-9FA9-337A8E443127}.Debug|x86.ActiveCfg = Debug|x86
+		{10F3320A-216C-4F55-9FA9-337A8E443127}.Debug|x86.Build.0 = Debug|x86
+		{10F3320A-216C-4F55-9FA9-337A8E443127}.Release|x86.ActiveCfg = Release|x86
+		{10F3320A-216C-4F55-9FA9-337A8E443127}.Release|x86.Build.0 = Release|x86
+		{7D672AA8-E046-40F7-87E4-201C4D08B3E3}.Debug|x86.ActiveCfg = Debug|x86
+		{7D672AA8-E046-40F7-87E4-201C4D08B3E3}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
