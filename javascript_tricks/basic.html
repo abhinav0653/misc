@@ -1,0 +1,114 @@
+<html>
+
+<body>
+    this is page body
+    <script>
+        function myfun(a, b) {
+            document.write(a * b);
+
+        }
+        alert("hello world");
+        var x = 0;
+        if (x == 1) {
+            document.write("hello");
+        }
+
+        for (i = 0; i < 10; i++) {
+            document.write(i);
+        }
+        myfun(1, 2);
+        myfun(3, 4);
+        myfun(5, 6);
+        var ans = confirm("are you bored");
+        alert(ans);
+
+        function textboxalert() {
+            var mytextbox = document.getElementById("mytextbox").value;
+            alert(mytextbox);
+        }
+
+
+
+        function create() {
+
+            var table = document.getElementById("my_dynamic_table");
+            var lastrow;
+            lastrow = table.rows.length;
+            console.log("Noofrows" + lastrow);
+
+            var row = table.insertRow(lastrow);
+            iteration = lastrow;
+            NoOfItems = iteration;
+
+            var cell1 = row.insertCell(0);
+            var el = document.createElement('input');
+            el.type = 'checkbox';
+            el.name = 'txtstate' + iteration;
+            el.id = 'txtstate' + iteration;
+            cell1.appendChild(el);
+
+            var cell2 = row.insertCell(1);
+            var el = document.createElement("textarea");
+            el.name = 'txtdescription' + iteration;
+            el.id = 'txtdescription' + iteration;
+            el.maxlength = "5000";
+            el.rows = "4";
+            el.cols = "50";
+            cell2.appendChild(el);
+
+            var cell3 = row.insertCell(2);
+            var el = document.createElement('input');
+            el.type = 'text';
+            el.name = 'owner' + iteration;
+            el.width = '100px';
+            el.id = 'owner' + iteration;
+            cell3.appendChild(el);
+
+            var cell4 = row.insertCell(3);
+            var el = document.createElement('select');
+            el.width = '200 px';
+            el.id = 'status' + iteration;
+            cell4.appendChild(el);
+
+            var cell5 = row.insertCell(4);
+            var el = document.createElement('input');
+            //el.type='text';
+            el.type = "date";
+            el.name = 'eta' + iteration;
+            el.id = 'eta' + iteration;
+            cell5.appendChild(el);
+            var cell6 = row.insertCell(5);
+            var el = document.createElement("textarea");
+            el.name = 'remarks' + iteration;
+            el.id = 'remarks' + iteration;
+            el.maxlength = "1000";
+            el.rows = "2";
+            el.cols = "30";
+            cell6.appendChild(el);
+        }
+    </script>
+
+
+    <form action="#" method="get">
+        Mytextbox:<input type="text" id=mytextbox><br>
+        <input type="button" value="press me" onclick="textboxalert();" />
+        <input type="button" value="press me to create new row" onclick="create();" />
+        <input type="button" value="go to yahoo" onclick="window.location='http://www.yahoo.com';" />
+        <a href="javascript:alert('hello I am a pseudo-URL script');">click to invoke</a>;
+        <a href="javascript:myfun(2,3);">click to invoke multiplication</a>;
+
+        <table id="my_dynamic_table" class="table" data-pagination="true">
+            <thead>
+                <tr>
+                    <th data-field="FirstName">Checkbox</th>
+                    <th data-field="MiddleName">Textbox</th>
+                    <th data-field="LastName">Dropdown</th>
+                    <th data-field="City">City</th>
+                    <th data-field="State">Date</th>
+                    <th data-field="Country">Country</th>
+                </tr>
+            </thead>
+        </table>
+</body>
+
+</html>
