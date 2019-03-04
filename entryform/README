@@ -1,0 +1,18 @@
+A PHP based web application with:
+form.html as front end.
+process.php as back end.
+
+Usage:
+form.html takes user details like name, age, course, DOB from user.
+It takes
+1) DOB as calendar date.
+2) profile picture as jpg. Warns if it does not meet requirement.
+3) CV as pdf. Warns if it does not meet requirement.
+
+
+process.php
+1)Takes the submitted form (POST request).
+2)Verifies the uploaded pictures and cv.
+3)Enters the text data in db.
+4)Saves file data in db using file structure.
+

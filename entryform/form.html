@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<script>
+
+			var CheckExtension=function(arg1)
+			{
+
+				var txt="";
+				if(arg1=="image")
+					var extall = "jpg,jpeg";	
+				else
+					var extall = "pdf";
+
+				var file = document.getElementById(arg1).files[0];
+				ext = file.name.split('.').pop().toLowerCase();
+
+				if(parseInt(extall.indexOf(ext))<0){
+					txt+="Unsupported extension:file must be of type:" + extall;
+				}
+				if(arg1=="image")
+				document.getElementById("display1").innerHTML=txt;
+				else
+				document.getElementById("display2").innerHTML=txt;
+			}
+
+		var CheckSize=function(arg1)
+		{
+			var txt="";
+			var file = document.getElementById(arg1).files[0];
+			
+			if(file){
+				if('size' in file)
+				{
+					txt +="FileSize:" +file.size;
+					if(file.size>250)
+						txt +="<br>File size exceeds 250KB";
+				}
+
+			}
+			document.getElementById("display3").innerHTML=txt;
+		}
+		
+		</script>
+	</head>
+
+    <body>
+
+	<form enctype="multipart/form-data" method='post' action="process.php">
+        Name: <input type='text' name='name' id='name'/><br/>
+        Age:<input type='text' name='age' id='age'/><br/>
+        Course: <input type='radio' name='course' value='B.TECH'><label for='B.TECH'>B.TECH </label>
+                <input type='radio' name='course' value='M.TECH'><label for='M.TECH'>M.TECH </label></br>
+        DOB: <input type="date" name='DOB' id='DOB' min="1979-12-31"/><br>
+
+
+	Upload profile picture(JPEG 250*250) : <input id="image" name="image" type="file" onchange="CheckExtension(this.id);"/>
+        <div id="display1"> </div>
+
+        Upload C.V(PDF:MAX SIZE 250KB): <input id="pdf" name="pdf" type="file" onchange="CheckExtension(this.id);CheckSize(this.id);"/>
+	<div id="display2">	</div>
+	<div id="display3">	</div>
+	<input type='submit' value='Submit'/>
+	</form>
+    </body>
+</html>
+
